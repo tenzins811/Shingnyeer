@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover Shingnyeer Village, its community, culture, news and events.">
+  <title>Shingnyeer Village | Community Portal</title>
+
+  <style>
+    :root {
+      --green: #174b3a;
+      --gold: #d7b56d;
+      --cream: #f7f5ed;
+      --ink: #24342d;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--ink);
+      line-height: 1.6;
+      background: white;
+    }
+
+    a { color: inherit; }
+
+    header {
+      background: var(--green);
+      color: white;
+      padding: 16px 6%;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 1.25rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+
+    .hero {
+      padding: 90px 8%;
+      text-align: center;
+      color: white;
+      background:
+        linear-gradient(#102d26bb, #102d26bb),
+        linear-gradient(135deg, #527d62, #173e34);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.3rem, 6vw, 4rem);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 24px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--gold);
+      color: #172a21;
+      padding: 12px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section { padding: 55px 8%; }
+
+    section h2 {
+      color: var(--green);
+      font-size: 2rem;
+      margin-top: 0;
+    }
+
+    .intro { background: var(--cream); }
+
+    .cards {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      padding: 22px;
+      border: 1px solid #e4e7e2;
+      border-radius: 10px;
+      background: white;
+    }
+
+    .card h3 { color: var(--green); }
+
+    .notice-date {
+      font-size: 0.85rem;
+      color: #66766d;
+    }
+
+    .contact { background: var(--cream); }
+
+    footer {
+      background: #102d26;
+      color: white;
+      padding: 25px 8%;
+      text-align: center;
+    }
+
+    footer p { margin: 6px 0; }
+
+    @media (max-width: 600px) {
+      nav { align-items: flex-start; }
+      .nav-links { gap: 12px; }
+      .hero { padding: 65px 6%; }
+      section { padding: 40px 6%; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <a class="brand" href="#home">Shingnyeer Village</a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <h1>འབྱོན་པ་ལེགས་སོ་ཤིང་གཉེར་མི་སྡེ་ནང་།།</h1>
+      <p>
+        Our community, our heritage, our future.
+        Explore village life, local culture and community updates.
+      </p>
+      <a class="button" href="#about">Discover our village</a>
+    </section>
+
+    <section class="intro" id="about">
+      <h2>About Shingnyeer</h2>
+      <p>
+        Welcome to the Shingnyeer Village information portal.
+        This website shares information about our community,
+        local traditions, activities and development.
+      </p>
+      <p>
+        Add the verified location, village history, local
+        facilities and community information here.
+      </p>
+    </section>
+
+    <section id="news">
+      <h2>Latest Announcements</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Community Notice</h3>
+          <p class="notice-date">Date: To be updated</p>
+          <p>Official announcements will appear here after verification.</p>
+        </article>
+
+        <article class="card">
+          <h3>Village Updates</h3>
+          <p class="notice-date">Date: To be updated</p>
+          <p>Share important community information and local news here.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="events">
+      <h2>Community Events</h2>
+      <p>
+        Add verified dates for community meetings, cultural
+        celebrations, volunteer activities and other events.
+      </p>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Contact</h2>
+      <p>Village or community office: To be confirmed</p>
+      <p>Email: Add an authorized contact email</p>
+      <p>Phone: Add a public contact number, with permission</p>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Shingnyeer Village</strong></p>
+    <p>Community information and local updates</p>
+    <p>&copy; <span id="year"></span> Shingnyeer Village</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
